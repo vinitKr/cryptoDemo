@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "compression": "1.7.1",
+    "cors": "2.8.4",
+    "errorhandler": "1.5.0",
+    "express": "4.16.2",
+    "method-override": "2.3.10",
+    "morgan": "1.9.0"
+  }
+}

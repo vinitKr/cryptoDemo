@@ -1,0 +1,36 @@
+<div class="container">
+
+  <form class="form-signin" #encryptForm="ngForm" (ngSubmit)="encryptForm.valid && encrypt()">
+    <h2 class="form-signin-heading">Encryption</h2>
+    <label for="inputEmail" class="sr-only">Plain text</label>
+    <input type="text" id="inputEmail" class="form-control" name="plainText" [(ngModel)]="encryptData.plainText" placeholder="Plain text"
+      required autofocus>
+    <label for="inputPassword" class="sr-only">Secret key</label>
+    <input type="text" id="inputPassword" class="form-control" name="secret" [(ngModel)]="encryptData.secret" placeholder="Secret key"
+      required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Encrypt</button>
+
+    <textarea name="cipher" class="form-control" rows="4" [(ngModel)]="encryptData.cipher" placeholder="Cipher"></textarea>
+  </form>
+
+</div>
+
+<div class="container">
+
+  <form class="form-signin" #bruteforceForm="ngForm" (ngSubmit)="bruteforceForm.valid && bruteforce()">
+    <h2 class="form-signin-heading">Bruteforce</h2>
+    <label for="inputEmail" class="sr-only">Cipher text</label>
+    <input type="text" id="inputEmail" class="form-control" name="cipherText" [(ngModel)]="bruteforceData.cipherText" placeholder="Cipher text"
+      required>
+    <label for="inputEmail" class="sr-only">Plain text</label>
+    <input type="text" id="inputEmail" class="form-control" name="plainTxt" [(ngModel)]="bruteforceData.plainText" placeholder="Plain text"
+      required>
+    <label for="inputPassword" class="sr-only">Key length</label>
+    <input type="text" id="inputPassword" class="form-control" name="keyLength" [(ngModel)]="bruteforceData.keyLength" placeholder="Key length"
+      required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Start Bruteforce</button>
+  </form>
+
+</div>
