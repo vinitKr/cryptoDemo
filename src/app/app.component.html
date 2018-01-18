@@ -23,12 +23,16 @@
     <label for="inputEmail" class="sr-only">Cipher text</label>
     <input type="text" id="inputEmail" class="form-control" name="cipherText" [(ngModel)]="bruteforceData.cipherText" placeholder="Cipher text"
       required>
-    <label for="inputEmail" class="sr-only">Plain text</label>
-    <input type="text" id="inputEmail" class="form-control" name="plainTxt" [(ngModel)]="bruteforceData.plainText" placeholder="Plain text"
+    <label for="inputEmail2" class="sr-only">Plain text</label>
+    <input type="text" id="inputEmail2" class="form-control" name="plainTxt" [(ngModel)]="bruteforceData.plainText" placeholder="Plain text"
       required>
     <label for="inputPassword" class="sr-only">Key length</label>
-    <input type="text" id="inputPassword" class="form-control" name="keyLength" [(ngModel)]="bruteforceData.keyLength" placeholder="Key length"
+    <input type="number" id="inputPassword" class="form-control" name="keyLength" [(ngModel)]="bruteforceData.keyLength" placeholder="Key length"
       required>
+    <label for="inputPassword2" class="sr-only">Algorithm</label>
+    <select id="inputPassword2" class="form-control" name="algorithm" [(ngModel)]="bruteforceData.algorithm" required>
+      <option value="aes192">AES192</option>
+    </select>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Start Bruteforce</button>
   </form>

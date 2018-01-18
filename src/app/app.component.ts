@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private _http: Http) {
     this.baseUrl = 'http://localhost:3000';
     this.encryptData = { plainText: '', secret: '', cipher: '' };
-    this.bruteforceData = { cipherText: '', plainText: '', keyLength: '' };
+    this.bruteforceData = { cipherText: '', plainText: '', keyLength: '', algorithm:'aes192' };
   }
 
   encrypt() {
